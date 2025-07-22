@@ -51,6 +51,10 @@
     </nav>
   </aside>
 
+<a href="https://wa.me/963959285689" target="_blank"
+   class="fixed bottom-5 right-5 bg-gradient-to-r from-[#25D366] to-[#128C7E] text-white p-4 rounded-full shadow-lg hover:scale-110 transition-all duration-300 z-50">
+  <i class="fab fa-whatsapp text-2xl"></i>
+</a>
 <!-- Hero -->
 <!-- Hero -->
 <section id="home" class="h-screen flex flex-col justify-center relative bg-gradient-to-br from-[#0f0f0f] via-[#1c1c1c] to-[#0f0f0f] overflow-hidden">
@@ -93,13 +97,32 @@
 </div>
 </section>
 
-  <!-- About Me -->
-  <section id="about" class="py-16 px-6 bg-[#1c1c1c] text-center">
-    <h3 class="text-3xl font-bold mb-6 text-[#FFE066]">من أنا</h3>
-    <p class="max-w-3xl mx-auto text-lg text-gray-300 leading-loose">
-      أنا كرم قاسم، مختص بتعديل الفيديوهات بجميع أنواعها سواء كانت إعلانات، فيديوهات يوتيوب، ريلز، أفلام قصيرة، أو فيديوهات ترويجية. أعمل بشغف لأخرج لك محتوى بصري احترافي يجذب الأنظار ويعكس رؤيتك.
-    </p>
-  </section>
+<!-- About Me -->
+<section id="about" class="py-16 px-6 bg-[#1c1c1c] text-center md:text-right relative overflow-hidden">
+
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-10 md:gap-20">
+
+    <!-- Image -->
+    <div class="md:w-1/2 w-full animate-fadeInUp">
+      <img src="img/about-me.png" alt="كرم قاسم مونتير" class="w-72 md:w-96 mx-auto md:mx-0 rounded-3xl shadow-xl hover:scale-105 transition-all duration-500">
+    </div>
+
+    <!-- Text -->
+    <div class="md:w-1/2 w-full animate-fadeInUp delay-200">
+      <h3 class="text-3xl font-bold mb-6 text-[#FFE066]">من أنا</h3>
+      <p class="text-lg text-gray-300 leading-loose">
+        أنا <span class="text-[#89CFF0] font-bold">كرم قاسم</span>، مختص بتعديل الفيديوهات بجميع أنواعها: إعلانات، ريلز، يوتيوب، أفلام قصيرة، فيديوهات ترويجية. 
+        أعمل بشغف لأصنع لك محتوى بصري احترافي يجذب الأنظار ويعكس رؤيتك بأعلى جودة.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Decorative Circles -->
+  <div class="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-[#FFE066]/10 to-transparent rounded-full blur-3xl animate-spin-slow"></div>
+  <div class="absolute bottom-0 right-0 w-72 h-72 bg-gradient-to-tr from-[#89CFF0]/10 to-transparent rounded-full blur-3xl animate-pulse"></div>
+
+</section>
 
 <!-- Services -->
 <section id="services" class="py-20 px-6 bg-[#0f0f0f] relative overflow-hidden">
@@ -229,12 +252,7 @@
     &copy; 2025 Karam Kassem | جميع الحقوق محفوظة
   </p>
   
-  <!-- Signature -->
-  <p class="text-sm text-gray-500">
-    صنع بإتقان بواسطة
-    <a href="https://ammar-kassem.github.io/Portfolio-/" target="_blank" class="text-[#89CFF0] hover:underline font-semibold">@ Ammar Kassem</a>
-  </p>
-  
+
   <!-- Floating Effect -->
   <div class="absolute inset-0 rounded-2xl border border-[#2c2c2c] shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] pointer-events-none"></div>
   
