@@ -9,12 +9,23 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    body { font-family: 'Tajawal', sans-serif; }
+    body { font-family: 'Tajawal', sans-serif;  }
+    *{
+      scroll-behavior: smooth;
+    }
     .hero-bg {
       background-image: url('https://images.unsplash.com/photo-1591101768185-7d2b4c2a99df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1400');
       background-size: cover;
       background-position: center;
     }
+  
+  .animate-spin-slow {
+    animation: spin 12s linear infinite;
+  }
+  .animate-bounce-slow {
+    animation: bounce 2.5s infinite;
+  }
+
   </style>
 </head>
 <body class="bg-[#0f0f0f] text-white">
@@ -41,18 +52,45 @@
   </aside>
 
 <!-- Hero -->
-<section id="home" class="h-screen flex items-center justify-center text-center relative bg-gradient-to-br from-[#0f0f0f] via-[#1c1c1c] to-[#0f0f0f]">
-  <div class="absolute inset-0 bg-gradient-to-tr from-[#89CFF0]/10 to-transparent animate-pulse opacity-20 blur-2xl"></div>
-  
-  <div class="bg-black bg-opacity-60 p-10 rounded-2xl shadow-2xl backdrop-blur-md animate-fadeIn max-w-2xl mx-auto">
-    <h2 class="text-4xl md:text-6xl font-black mb-4 text-[#FFE066]">كرم قاسم</h2>
-    <p class="text-lg md:text-xl text-gray-300 mb-4 leading-relaxed">
-      مونتير فيديو محترف أساعدك في تحويل أفكارك إلى مقاطع بصرية جذابة، سواء كنت صاحب بزنس، صانع محتوى أو فرد يبحث عن التميز.
-    </p>
-    <a href="https://wa.me/971501234567" target="_blank" class="mt-6 inline-flex items-center bg-[#FFE066] text-black px-6 py-3 rounded-full text-lg hover:bg-yellow-400 transition shadow-lg">
-      <i class="fas fa-video ml-2"></i> اطلب مقطعك الآن
-    </a>
+<!-- Hero -->
+<section id="home" class="h-screen flex flex-col justify-center relative bg-gradient-to-br from-[#0f0f0f] via-[#1c1c1c] to-[#0f0f0f] overflow-hidden">
+
+  <!-- Background Circles -->
+  <div class="absolute inset-0 flex justify-center items-center">
+    <div class="w-[600px] h-[600px] bg-gradient-to-tr from-[#89CFF0]/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
+    <div class="absolute top-20 right-20 w-48 h-48 bg-[#FFE066]/10 rounded-full blur-2xl animate-spin-slow"></div>
+    <div class="absolute bottom-20 left-20 w-36 h-36 bg-[#FFC300]/10 rounded-full blur-2xl animate-ping"></div>
   </div>
+
+
+
+  <!-- Content -->
+<div class="relative z-10 text-center p-8 md:p-12 bg-black/50 backdrop-blur-lg rounded-3xl shadow-2xl max-w-3xl mx-auto border border-[#2c2c2c]">
+  
+  <!-- Logo Centered -->
+  <img src="img/logo.png" alt="logo" class="w-36 mx-auto mb-6 drop-shadow-lg">
+  
+  <h1 class="text-5xl md:text-7xl font-extrabold text-[#FFE066] mb-6 drop-shadow-lg">
+    مونتاج بإبداع
+  </h1>
+  
+  <p class="text-xl md:text-2xl text-gray-300 leading-relaxed mb-8">
+    أهلاً بك، أنا <span class="text-[#89CFF0] font-bold">كرم قاسم</span>، مونتير محترف أحول أفكارك إلى فيديوهات تخطف الأنظار.
+    دعنا نصنع شيئاً مذهلاً معًا!
+  </p>
+  
+  <a href="https://wa.me/963959285689" target="_blank" class="inline-flex items-center gap-3 bg-gradient-to-r from-[#FFE066] to-[#FFC300] hover:from-[#FFC300] hover:to-[#FFE066] text-black px-8 py-4 rounded-full text-lg font-bold transition-all shadow-xl hover:shadow-2xl animate-bounce-slow">
+    <i class="fas fa-play-circle text-2xl"></i> اطلب مقطعك الآن
+  </a>
+  
+  <!-- Icons -->
+  <div class="mt-8 flex justify-center gap-6 text-2xl text-[#89CFF0]">
+    <i class="fas fa-film hover:text-[#FFE066] transition"></i>
+    <i class="fas fa-magic hover:text-[#FFE066] transition"></i>
+    <i class="fas fa-bolt hover:text-[#FFE066] transition"></i>
+  </div>
+  
+</div>
 </section>
 
   <!-- About Me -->
@@ -124,14 +162,14 @@
       </div>
 
       <div class="bg-[#0f0f0f] p-4 rounded-xl hover:shadow-lg transition">
-        <img src="https://images.unsplash.com/photo-1599058917212-d4b87a7f2744?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="مشروع" class="rounded-lg mb-4">
+        <img src="img/1.png" alt="مشروع" class="rounded-lg mb-4">
         <h4 class="text-xl font-semibold mb-2 text-[#89CFF0]">مقطع يوتيوب</h4>
         <p class="mb-4 text-gray-400">مونتاج فيديو تعليمي لقناة يوتيوب.</p>
         <a href="#" target="_blank" class="text-[#FFE066] hover:underline"><i class="fas fa-play mr-2"></i>مشاهدة</a>
       </div>
 
       <div class="bg-[#0f0f0f] p-4 rounded-xl hover:shadow-lg transition">
-        <img src="https://images.unsplash.com/photo-1581090700227-1e7e4b5a9b98?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="مشروع" class="rounded-lg mb-4">
+        <img src="img/1.png" alt="مشروع" class="rounded-lg mb-4">
         <h4 class="text-xl font-semibold mb-2 text-[#89CFF0]">ريلز وانستغرام</h4>
         <p class="mb-4 text-gray-400">مونتاج مقاطع قصيرة للتواصل الاجتماعي.</p>
         <a href="#" target="_blank" class="text-[#FFE066] hover:underline"><i class="fas fa-play mr-2"></i>مشاهدة</a>
@@ -172,9 +210,35 @@
 </section>
 
   <!-- Footer -->
-  <footer class="bg-[#1c1c1c]/80 backdrop-blur-md p-4 text-center text-gray-400 text-sm rounded-t-2xl shadow-inner">
-    &copy; 2025 Pixel Vault | جميع الحقوق محفوظة
-  </footer>
+<footer class="relative bg-[#1c1c1c]/80 backdrop-blur-xl p-6 text-center text-gray-400 text-sm rounded-2xl shadow-2xl mx-4 mb-4 mt-16 max-w-5xl mx-auto border border-[#2c2c2c] hover:border-[#89CFF0] transition-all duration-300">
+  
+  <!-- Social & Payments -->
+  <div class="flex justify-center items-center gap-6 mb-4 flex-wrap text-xl">
+    <a href="#" target="_blank" class="hover:text-[#89CFF0] transition"><i class="fab fa-facebook"></i></a>
+    <a href="#" target="_blank" class="hover:text-[#89CFF0] transition"><i class="fab fa-instagram"></i></a>
+    <a href="#" target="_blank" class="hover:text-[#89CFF0] transition"><i class="fab fa-tiktok"></i></a>
+    <a href="#" target="_blank" class="hover:text-[#89CFF0] transition"><i class="fab fa-youtube"></i></a>
+    <span class="mx-4 text-gray-500">|</span>
+    <i class="fab fa-cc-visa text-[#FFE066]"></i>
+    <i class="fab fa-cc-mastercard text-[#FFE066]"></i>
+    <i class="fab fa-cc-paypal text-[#FFE066]"></i>
+  </div>
+  
+  <!-- Rights -->
+  <p class="mb-2 text-gray-400">
+    &copy; 2025 Karam Kassem | جميع الحقوق محفوظة
+  </p>
+  
+  <!-- Signature -->
+  <p class="text-sm text-gray-500">
+    صنع بإتقان بواسطة
+    <a href="https://ammar-kassem.github.io/Portfolio-/" target="_blank" class="text-[#89CFF0] hover:underline font-semibold">@ Ammar Kassem</a>
+  </p>
+  
+  <!-- Floating Effect -->
+  <div class="absolute inset-0 rounded-2xl border border-[#2c2c2c] shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] pointer-events-none"></div>
+  
+</footer>
 
   <!-- Animation -->
   <script>
