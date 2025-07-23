@@ -1,2 +1,12 @@
-
-  
+Hi ,I'm Ammar Kassem 
+  Web developer 
+  technology:
+    - HTML
+    - CSS
+    - JS
+    - TAILWEND 
+    - DJANGO
+    
+GOOD LUCK KARAM!  
+    
+ 
