@@ -30,6 +30,24 @@
 </head>
 <body class="bg-[#0f0f0f] text-white">
 
+<!-- 🌀 صفحة التحميل -->
+<div id="preloader" class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-lg transition-opacity duration-700">
+  <img src="img/logo.png" alt="Logo" class="w-32 h-32 animate-pulse drop-shadow-lg">
+</div>
+
+<script>
+  // ⏳ إخفاء صفحة التحميل بعد 2 ثانية
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      const loader = document.getElementById("preloader");
+      loader.classList.add("opacity-0");
+      setTimeout(() => loader.style.display = "none", 700); // بعد الإنميشن
+    }, 2000);
+  });
+</script>
+
+
+
   <!-- Header -->
   <header class="flex items-center justify-between p-4 bg-[#1c1c1c]/80 backdrop-blur-md shadow-lg fixed top-4 right-4 left-4 rounded-2xl z-50">
     
@@ -55,48 +73,46 @@
    class="fixed bottom-5 right-5 bg-gradient-to-r from-[#25D366] to-[#128C7E] text-white p-4 rounded-full shadow-lg hover:scale-110 transition-all duration-300 z-50">
   <i class="fab fa-whatsapp text-2xl"></i>
 </a>
-<!-- Hero -->
-<!-- Hero -->
-<section id="home" class="h-screen flex flex-col justify-center relative bg-gradient-to-br from-[#0f0f0f] via-[#1c1c1c] to-[#0f0f0f] overflow-hidden">
+<!-- Hero with Video Background -->
+<section id="home" class="relative h-screen flex items-center justify-center text-center overflow-hidden">
 
-  <!-- Background Circles -->
-  <div class="absolute inset-0 flex justify-center items-center">
-    <div class="w-[600px] h-[600px] bg-gradient-to-tr from-[#89CFF0]/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
+  <!-- 🎥 خلفية الفيديو -->
+  <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover brightness-50 z-0">
+    <source src="img/bg-video.mp4" type="video/mp4">
+    متصفحك لا يدعم تشغيل الفيديو.
+  </video>
+
+  <!-- 🌈 تأثيرات فوق الفيديو -->
+  <div class="absolute inset-0">
     <div class="absolute top-20 right-20 w-48 h-48 bg-[#FFE066]/10 rounded-full blur-2xl animate-spin-slow"></div>
     <div class="absolute bottom-20 left-20 w-36 h-36 bg-[#FFC300]/10 rounded-full blur-2xl animate-ping"></div>
+
   </div>
 
+  <!-- ✨ المحتوى -->
+  <div class="relative z-10 px-6 max-w-3xl mx-auto">
+    <h1 class="text-5xl md:text-7xl font-extrabold text-[#FFE066] mb-6 drop-shadow-lg">
+      مونتاج بإبداع
+    </h1>
 
+    <p class="text-xl md:text-2xl text-gray-200 leading-relaxed mb-8">
+      أهلاً بك، أنا <span class="text-[#89CFF0] font-bold">كرم قاسم</span>، مونتير محترف أحول أفكارك إلى فيديوهات تخطف الأنظار.
+      دعنا نصنع شيئاً مذهلاً معًا!
+    </p>
 
-  <!-- Content -->
-<div class="relative z-10 text-center p-8 md:p-12 bg-black/50 backdrop-blur-lg rounded-3xl shadow-2xl max-w-3xl mx-auto border border-[#2c2c2c]">
-  
-  <!-- Logo Centered -->
-  <img src="img/logo.png" alt="logo" class="w-36 mx-auto mb-6 drop-shadow-lg">
-  
-  <h1 class="text-5xl md:text-7xl font-extrabold text-[#FFE066] mb-6 drop-shadow-lg">
-    مونتاج بإبداع
-  </h1>
-  
-  <p class="text-xl md:text-2xl text-gray-300 leading-relaxed mb-8">
-    أهلاً بك، أنا <span class="text-[#89CFF0] font-bold">كرم قاسم</span>، مونتير محترف أحول أفكارك إلى فيديوهات تخطف الأنظار.
-    دعنا نصنع شيئاً مذهلاً معًا!
-  </p>
-  
-  <a href="https://wa.me/963959285689" target="_blank" class="inline-flex items-center gap-3 bg-gradient-to-r from-[#FFE066] to-[#FFC300] hover:from-[#FFC300] hover:to-[#FFE066] text-black px-8 py-4 rounded-full text-lg font-bold transition-all shadow-xl hover:shadow-2xl animate-bounce-slow">
-    <i class="fas fa-play-circle text-2xl"></i> اطلب مقطعك الآن
-  </a>
-  
-  <!-- Icons -->
-  <div class="mt-8 flex justify-center gap-6 text-2xl text-[#89CFF0]">
-    <i class="fas fa-film hover:text-[#FFE066] transition"></i>
-    <i class="fas fa-magic hover:text-[#FFE066] transition"></i>
-    <i class="fas fa-bolt hover:text-[#FFE066] transition"></i>
+    <a href="https://wa.me/963959285689" target="_blank"
+      class="inline-flex items-center gap-3 bg-gradient-to-r from-[#FFE066] to-[#FFC300] hover:from-[#FFC300] hover:to-[#FFE066] text-black px-8 py-4 rounded-full text-lg font-bold transition-all shadow-xl hover:shadow-2xl animate-bounce-slow">
+      <i class="fas fa-play-circle text-2xl"></i> اطلب مقطعك الآن
+    </a>
+
+    <!-- أيقونات -->
+    <div class="mt-8 flex justify-center gap-6 text-2xl text-[#89CFF0]">
+      <i class="fas fa-film hover:text-[#FFE066] transition"></i>
+      <i class="fas fa-magic hover:text-[#FFE066] transition"></i>
+      <i class="fas fa-bolt hover:text-[#FFE066] transition"></i>
+    </div>
   </div>
-  
-</div>
 </section>
-
 <!-- About Me -->
 <section id="about" class="py-16 px-6 bg-[#1c1c1c] text-center md:text-right relative overflow-hidden">
 
@@ -173,32 +189,106 @@
 
 
 
-  <!-- Projects -->
-  <section id="projects" class="py-16 px-6 bg-[#1c1c1c]">
-    <h3 class="text-3xl font-bold text-center mb-10 text-[#FFE066]">أعمالي</h3>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="bg-[#0f0f0f] p-4 rounded-xl hover:shadow-lg transition">
-        <img src="img/1.png" alt="مشروع" class="rounded-lg mb-4">
-        <h4 class="text-xl font-semibold mb-2 text-[#89CFF0]">إعلان منتج</h4>
-        <p class="mb-4 text-gray-400">فيديو ترويجي لمنتج جديد بأسلوب احترافي.</p>
-        <a href="#" target="_blank" class="text-[#FFE066] hover:underline"><i class="fas fa-play mr-2"></i>مشاهدة</a>
-      </div>
+<!-- Collaborate -->
+<section id="collab" class="py-20 px-6 bg-[#1c1c1c] text-center">
+  <h3 class="text-3xl md:text-4xl font-bold mb-6 text-[#FFE066]">تعاون مع كرم</h3>
+  <p class="text-lg text-gray-300 mb-8 max-w-xl mx-auto">
+    إذا كنت تبحث عن مونتير محترف يحول فكرتك إلى فيديو يخطف الأنفاس، فأنت في المكان المناسب.
+  </p>
+  <a href="#contact" class="inline-flex items-center gap-3 bg-gradient-to-r from-[#FFE066] to-[#FFC300] hover:from-[#FFC300] hover:to-[#FFE066] text-black px-8 py-4 rounded-full text-lg font-bold transition-all shadow-md hover:shadow-xl">
+    <i class="fas fa-handshake text-xl"></i> ابدأ التعاون الآن
+  </a>
+</section>
 
-      <div class="bg-[#0f0f0f] p-4 rounded-xl hover:shadow-lg transition">
-        <img src="img/1.png" alt="مشروع" class="rounded-lg mb-4">
-        <h4 class="text-xl font-semibold mb-2 text-[#89CFF0]">مقطع يوتيوب</h4>
-        <p class="mb-4 text-gray-400">مونتاج فيديو تعليمي لقناة يوتيوب.</p>
-        <a href="#" target="_blank" class="text-[#FFE066] hover:underline"><i class="fas fa-play mr-2"></i>مشاهدة</a>
-      </div>
 
-      <div class="bg-[#0f0f0f] p-4 rounded-xl hover:shadow-lg transition">
-        <img src="img/1.png" alt="مشروع" class="rounded-lg mb-4">
-        <h4 class="text-xl font-semibold mb-2 text-[#89CFF0]">ريلز وانستغرام</h4>
-        <p class="mb-4 text-gray-400">مونتاج مقاطع قصيرة للتواصل الاجتماعي.</p>
-        <a href="#" target="_blank" class="text-[#FFE066] hover:underline"><i class="fas fa-play mr-2"></i>مشاهدة</a>
-      </div>
+<!-- Projects -->
+<section id="projects" class="py-20 px-6 bg-[#1c1c1c] text-center">
+  <h3 class="text-3xl md:text-4xl font-bold mb-10 text-[#FFE066]">أعمالي</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+    <!-- Project Item -->
+    <div class="project-card cursor-pointer bg-[#0f0f0f] p-4 rounded-2xl hover:shadow-xl transition group relative overflow-hidden"
+         data-title="إعلان منتج"
+         data-desc="فيديو ترويجي مميز لمنتج جديد بأسلوب سينمائي جذاب."
+         data-link="https://example.com/video1">
+      <img src="img/1.png" alt="مشروع" class="rounded-lg mb-4 group-hover:opacity-75 transition">
+      <h4 class="text-xl font-semibold text-[#89CFF0]">إعلان منتج</h4>
     </div>
-  </section>
+
+    <!-- Project 2 -->
+    <div class="project-card cursor-pointer bg-[#0f0f0f] p-4 rounded-2xl hover:shadow-xl transition group relative overflow-hidden"
+         data-title="فيديو يوتيوب"
+         data-desc="مونتاج تعليمي احترافي لقناة يوتيوب."
+         data-link="https://example.com/video2">
+      <img src="img/1.png" alt="مشروع" class="rounded-lg mb-4 group-hover:opacity-75 transition">
+      <h4 class="text-xl font-semibold text-[#89CFF0]">فيديو يوتيوب</h4>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card cursor-pointer bg-[#0f0f0f] p-4 rounded-2xl hover:shadow-xl transition group relative overflow-hidden"
+         data-title="ريلز إنستغرام"
+         data-desc="مقاطع قصيرة ترويجية مخصصة للسوشال ميديا."
+         data-link="https://example.com/video3">
+      <img src="img/1.png" alt="مشروع" class="rounded-lg mb-4 group-hover:opacity-75 transition">
+      <h4 class="text-xl font-semibold text-[#89CFF0]">ريلز إنستغرام</h4>
+    </div>
+
+  </div>
+</section>
+  <!-- Popup Modal -->
+<div id="projectModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 hidden">
+  <div class="bg-[#1c1c1c] rounded-2xl p-8 max-w-lg w-full relative text-left border border-gray-700 shadow-xl">
+    <button onclick="closeModal()" class="absolute top-3 right-4 text-gray-300 hover:text-white text-xl">
+      <i class="fas fa-times"></i>
+    </button>
+    <h4 id="modalTitle" class="text-2xl font-bold text-[#FFE066] mb-4"></h4>
+    <p id="modalDesc" class="text-gray-300 mb-6"></p>
+    <a id="modalLink" href="#" target="_blank" class="inline-flex items-center gap-2 bg-[#89CFF0] hover:bg-[#6fb5e0] text-black font-semibold px-6 py-3 rounded-full transition">
+      <i class="fas fa-play"></i> مشاهدة المقطع
+    </a>
+  </div>
+</div>
+  
+  
+  
+  <!-- Testimonials -->
+<section id="testimonials" class="py-20 px-6 bg-[#0f0f0f] text-center">
+  <h3 class="text-3xl font-bold text-[#FFE066] mb-12">آراء العملاء</h3>
+
+  <div class="grid gap-8 md:grid-cols-3">
+    <!-- Testimonial 1 -->
+    <div class="bg-[#1c1c1c] p-6 rounded-2xl shadow-xl hover:scale-105 transition duration-300 relative overflow-hidden">
+      <i class="fas fa-quote-right text-[#89CFF0] text-4xl absolute top-4 left-4"></i>
+      <p class="text-gray-300 text-lg mb-4 leading-relaxed">
+        كرم أبدع في المونتاج! سرعة في التسليم واحترافية عالية بالتفاصيل.
+      </p>
+      <div class="text-[#FFE066] font-semibold">محمد العلي</div>
+      <div class="text-sm text-gray-500">صانع محتوى - السعودية</div>
+    </div>
+
+    <!-- Testimonial 2 -->
+    <div class="bg-[#1c1c1c] p-6 rounded-2xl shadow-xl hover:scale-105 transition duration-300 relative overflow-hidden">
+      <i class="fas fa-quote-right text-[#89CFF0] text-4xl absolute top-4 left-4"></i>
+      <p class="text-gray-300 text-lg mb-4 leading-relaxed">
+        حسيت كأن الفيديو طالع من شركة إنتاج سينمائي! شكراً كرم على الإبداع.
+      </p>
+      <div class="text-[#FFE066] font-semibold">لينا يوسف</div>
+      <div class="text-sm text-gray-500">مديرة تسويق - دبي</div>
+    </div>
+
+    <!-- Testimonial 3 -->
+    <div class="bg-[#1c1c1c] p-6 rounded-2xl shadow-xl hover:scale-105 transition duration-300 relative overflow-hidden">
+      <i class="fas fa-quote-right text-[#89CFF0] text-4xl absolute top-4 left-4"></i>
+      <p class="text-gray-300 text-lg mb-4 leading-relaxed">
+        تعامل راقٍ وسريع، والمونتاج كان خرافي. أنصح فيه 100%.
+      </p>
+      <div class="text-[#FFE066] font-semibold">خالد السالم</div>
+      <div class="text-sm text-gray-500">يوتيوبر - قطر</div>
+    </div>
+  </div>
+</section>
+  
+  
 
   <!-- Contact -->
 <!-- Contact -->
@@ -252,7 +342,11 @@
     &copy; 2025 Karam Kassem | جميع الحقوق محفوظة
   </p>
   
-
+  <!-- Signature -->
+  <p class="text-sm text-gray-500">
+    صنع بإتقان بواسطة
+    <a href="https://ammar-kassem.github.io/Portfolio-/" target="_blank" class="text-[#89CFF0] hover:underline font-semibold">@ Ammar Kassem</a>
+  </p>
   <!-- Floating Effect -->
   <div class="absolute inset-0 rounded-2xl border border-[#2c2c2c] shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] pointer-events-none"></div>
   
@@ -276,6 +370,31 @@
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
 
     window.open(url, '_blank');
+  }
+</script>
+
+
+
+
+
+<script>
+  // استهداف كل العناصر التي تحتوي على data
+  document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const title = card.getAttribute('data-title');
+      const desc = card.getAttribute('data-desc');
+      const link = card.getAttribute('data-link');
+
+      document.getElementById('modalTitle').textContent = title;
+      document.getElementById('modalDesc').textContent = desc;
+      document.getElementById('modalLink').href = link;
+
+      document.getElementById('projectModal').classList.remove('hidden');
+    });
+  });
+
+  function closeModal() {
+    document.getElementById('projectModal').classList.add('hidden');
   }
 </script>
 </body>

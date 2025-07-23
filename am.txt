@@ -1,6 +1,2 @@
-  <!-- Signature -->
-  <p class="text-sm text-gray-500">
-    صنع بإتقان بواسطة
-    <a href="https://ammar-kassem.github.io/Portfolio-/" target="_blank" class="text-[#89CFF0] hover:underline font-semibold">@ Ammar Kassem</a>
-  </p>
+
   
